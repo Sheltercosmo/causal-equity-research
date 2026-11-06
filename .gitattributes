@@ -1,0 +1,3 @@
+* text=auto eol=lf
+*.xlsx binary
+.agents/skills/causal-equity-research/references/source-specification-v2.md -text

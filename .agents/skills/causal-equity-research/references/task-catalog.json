@@ -1,0 +1,917 @@
+{
+  "source": "source-specification-v2.md, Appendix C",
+  "tasks": [
+    {
+      "id": "T01",
+      "stage": "Mandate",
+      "role": "O00",
+      "gate": "G00",
+      "title": "Freeze the final objective",
+      "instruction": "Resolve universe, A/ADR/H class rules, horizon, currency, dividends, liquidity constraints and source cutoff. Output: Run contract."
+    },
+    {
+      "id": "T02",
+      "stage": "Mandate",
+      "role": "A01",
+      "gate": "G01",
+      "title": "Validate the clock",
+      "instruction": "Record quote time, timezone, last completed exchange session, target exchange session and report availability. Output: Clock map."
+    },
+    {
+      "id": "T03",
+      "stage": "Evidence",
+      "role": "A01",
+      "gate": "G02",
+      "title": "Quarantine prior work",
+      "instruction": "Extract prior claims as hypotheses; reopen original filings before reusing any numeric claim. Output: Quarantine log."
+    },
+    {
+      "id": "T04",
+      "stage": "Evidence",
+      "role": "A01",
+      "gate": "G02",
+      "title": "Preserve source lineage",
+      "instruction": "Store publication and observation dates, original author, archive/hash and exact page/table. Output: Source ledger."
+    },
+    {
+      "id": "T05",
+      "stage": "Evidence",
+      "role": "A01",
+      "gate": "G02",
+      "title": "Distinguish fact types",
+      "instruction": "Tag observed fact, company claim, derivation, model assumption, unresolved or contradicted. Output: Claim ledger."
+    },
+    {
+      "id": "T06",
+      "stage": "Discovery",
+      "role": "A03",
+      "gate": "G00",
+      "title": "Explore independently",
+      "instruction": "Map at least 12 distinct market pools before narrowing; include slower markets with valuation dislocations. Output: Market-pool inventory."
+    },
+    {
+      "id": "T07",
+      "stage": "Discovery",
+      "role": "A03",
+      "gate": "G14",
+      "title": "Record rejection logic",
+      "instruction": "Log every screened name, evidence depth and reason; a shallow screen is not a completed valuation. Output: Universe log."
+    },
+    {
+      "id": "T08",
+      "stage": "Discovery",
+      "role": "A03",
+      "gate": "G04",
+      "title": "Seek adjacent beneficiaries",
+      "instruction": "Trace where customer spend and supplier profit move after each bottleneck is relieved. Output: Beneficiary graph."
+    },
+    {
+      "id": "T09",
+      "stage": "Macro",
+      "role": "A02",
+      "gate": "G04",
+      "title": "Decompose rates",
+      "instruction": "Separate risk-free rates, credit spreads and refinancing exposure; distinguish demand-financing from valuation effects. Output: Rate transmission."
+    },
+    {
+      "id": "T10",
+      "stage": "Macro",
+      "role": "A02",
+      "gate": "G09",
+      "title": "Trace FX",
+      "instruction": "Separate revenue translation, input currency, monetary balances, hedges and OCI. Output: FX exposure map."
+    },
+    {
+      "id": "T11",
+      "stage": "Macro",
+      "role": "A02",
+      "gate": "G06",
+      "title": "Trace energy and logistics",
+      "instruction": "Map electricity, fuel, feedstock, freight and route/insurance changes to specific stages and lags. Output: Input transmission."
+    },
+    {
+      "id": "T12",
+      "stage": "Macro",
+      "role": "A02",
+      "gate": "G04",
+      "title": "Trace policy mechanically",
+      "instruction": "Record enacted rules, dates and affected geography; separate announcements from effective implementation. Output: Policy transmission."
+    },
+    {
+      "id": "T13",
+      "stage": "Macro",
+      "role": "A02",
+      "gate": "G04",
+      "title": "Separate real demand from inflation",
+      "instruction": "Split nominal growth into units, price, mix and currency; distinguish bookings and installed utilization. Output: Macro-to-units bridge."
+    },
+    {
+      "id": "T14",
+      "stage": "Chain",
+      "role": "A04",
+      "gate": "G05",
+      "title": "Define the unit",
+      "instruction": "Choose grade, specification, width/area/weight, voltage/rate, geography and period before counting supply. Output: Unit dictionary."
+    },
+    {
+      "id": "T15",
+      "stage": "Chain",
+      "role": "A04",
+      "gate": "G05",
+      "title": "Draw physical and cash flows",
+      "instruction": "Record buyer/supplier links, captive use, inventory owners, payment terms and revenue recognition. Output: Chain map."
+    },
+    {
+      "id": "T16",
+      "stage": "Chain",
+      "role": "A04",
+      "gate": "G05",
+      "title": "Find shared bottlenecks",
+      "instruction": "Identify common foundries, tooling, skilled labor, power, qualification and equipment vendors. Output: Constraint map."
+    },
+    {
+      "id": "T17",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G04",
+      "title": "Build end-customer deployment cohorts",
+      "instruction": "Start with named projects/customers and funded units; separate orders, cancellations, installations and utilization. Output: Demand cohorts."
+    },
+    {
+      "id": "T18",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G04",
+      "title": "Model content",
+      "instruction": "Derive material/device content from BOM, layers, channels, links, compute or service workloads. Output: Content model."
+    },
+    {
+      "id": "T19",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G03",
+      "title": "Model economic adoption",
+      "instruction": "Calculate break-even thresholds by customer type; estimate the addressable subset, not all nominal units. Output: Adoption map."
+    },
+    {
+      "id": "T20",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G04",
+      "title": "Model replacement and inventory",
+      "instruction": "Track product lifetime, installed base, stock drawdowns, restocking and channel duplication. Output: Consumption/order bridge."
+    },
+    {
+      "id": "T21",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G04",
+      "title": "Check funding and complements",
+      "instruction": "Cap deployments by financing, permits, power, skilled labor, supporting components or reimbursement. Output: Feasible-demand cap."
+    },
+    {
+      "id": "T22",
+      "stage": "Demand",
+      "role": "A05",
+      "gate": "G04",
+      "title": "Independent demand cross-check",
+      "instruction": "Compare bottom-up units with physical output/shipments and competitor/customer reports. Output: Demand reconciliation."
+    },
+    {
+      "id": "T23",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G05",
+      "title": "Inventory every material project",
+      "instruction": "Track announced, funded, equipment secured, built, commissioned, qualified and ramping capacity. Output: Capacity ledger."
+    },
+    {
+      "id": "T24",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G05",
+      "title": "Reconcile dates across periods",
+      "instruction": "Compare original schedules, revisions, actual starts, cancellations and delays. Output: Project change log."
+    },
+    {
+      "id": "T25",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G05",
+      "title": "Convert nameplate to effective output",
+      "instruction": "Convert annual capacity to period output; apply stage limits, uptime, yield and customer qualification. Output: Qualified supply."
+    },
+    {
+      "id": "T26",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G05",
+      "title": "Model grade allocation",
+      "instruction": "Use machine-hours or equivalent constraints; faster growth of one grade can reduce another grade's supply. Output: Allocation model."
+    },
+    {
+      "id": "T27",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G08",
+      "title": "Include rational competitor response",
+      "instruction": "Model output increases, cold repairs, debottlenecking, substitution, imports and new entrants. Output: Response paths."
+    },
+    {
+      "id": "T28",
+      "stage": "Supply",
+      "role": "A06",
+      "gate": "G05",
+      "title": "Avoid double counting",
+      "instruction": "Remove captive/intermediate duplication; reconcile parent/subsidiary and OEM/foundry quantities. Output: Supply audit."
+    },
+    {
+      "id": "T29",
+      "stage": "Price",
+      "role": "A07",
+      "gate": "G06",
+      "title": "Build comparable price series",
+      "instruction": "Match grade, unit, tax/freight basis, region, currency, order size and contract duration. Output: Price ledger."
+    },
+    {
+      "id": "T30",
+      "stage": "Price",
+      "role": "A07",
+      "gate": "G06",
+      "title": "Separate announced and realized pricing",
+      "instruction": "Build order cohorts with effective dates, renegotiation scope, discounts and delivery lags. Output: Realized ASP model."
+    },
+    {
+      "id": "T31",
+      "stage": "Price",
+      "role": "A07",
+      "gate": "G09",
+      "title": "Trace input cost into COGS",
+      "instruction": "Match procurement cohorts, inventory method, production and sale timing; separate capex inputs. Output: Cost-roll-through model."
+    },
+    {
+      "id": "T32",
+      "stage": "Price",
+      "role": "A07",
+      "gate": "G06",
+      "title": "Prove bargaining power",
+      "instruction": "Compare seller price/cost/volume with buyer procurement costs, margins, retention and payment terms. Output: Surplus-allocation bridge."
+    },
+    {
+      "id": "T33",
+      "stage": "Price",
+      "role": "A07",
+      "gate": "G06",
+      "title": "Find normalization mechanism",
+      "instruction": "Determine marginal supplier, substitutable capacity, customer alternatives and expected inventory balance. Output: Multi-period price path."
+    },
+    {
+      "id": "T34",
+      "stage": "Technology",
+      "role": "A08",
+      "gate": "G03",
+      "title": "Compare like for like",
+      "instruction": "Control workload, process, reach, power, accuracy, reliability, environment and system boundary. Output: Benchmark matrix."
+    },
+    {
+      "id": "T35",
+      "stage": "Technology",
+      "role": "A08",
+      "gate": "G03",
+      "title": "Convert component to system gain",
+      "instruction": "Apply workload fractions and other constraints; do not extrapolate a component maximum to the full system. Output: System benefit model."
+    },
+    {
+      "id": "T36",
+      "stage": "Technology",
+      "role": "A08",
+      "gate": "G07",
+      "title": "Include alternatives and future roadmaps",
+      "instruction": "Compare do-nothing, internal design, incumbents, substitutes and feasible rival roadmaps. Output: Counter-technology map."
+    },
+    {
+      "id": "T37",
+      "stage": "Technology",
+      "role": "A08",
+      "gate": "G03",
+      "title": "Classify maturity",
+      "instruction": "Separate simulation, prototype, qualification, pilot shipment, volume production and fleet results. Output: Maturity ledger."
+    },
+    {
+      "id": "T38",
+      "stage": "Customer economics",
+      "role": "A09",
+      "gate": "G03",
+      "title": "Build full lifecycle TCO",
+      "instruction": "Include redesign, integration, downtime, training, certification, support, financing and replacement. Output: Customer TCO."
+    },
+    {
+      "id": "T39",
+      "stage": "Customer economics",
+      "role": "A09",
+      "gate": "G03",
+      "title": "Prevent benefit double counting",
+      "instruction": "Do not count freed labor as both cash saving and incremental output; use contribution, not gross revenue. Output: Economic audit."
+    },
+    {
+      "id": "T40",
+      "stage": "Customer economics",
+      "role": "A09",
+      "gate": "G07",
+      "title": "Model switching symmetrically",
+      "instruction": "Measure cost to adopt and cost to leave; assess multisourcing, contract renewal and open-source ownership. Output: Switching-cost map."
+    },
+    {
+      "id": "T41",
+      "stage": "Competition",
+      "role": "A10",
+      "gate": "G07",
+      "title": "Construct the real denominator",
+      "instruction": "Define merchant versus captive, geography, applications, value share and unit share. Output: Contestable SAM."
+    },
+    {
+      "id": "T42",
+      "stage": "Competition",
+      "role": "A10",
+      "gate": "G07",
+      "title": "Build design-win/retention cohorts",
+      "instruction": "Track eligible programs, nominations, qualification, production units, losses, cancellations and renewal. Output: Share conversion model."
+    },
+    {
+      "id": "T43",
+      "stage": "Competition",
+      "role": "A10",
+      "gate": "G10",
+      "title": "Validate share independently",
+      "instruction": "Check wins/losses, market-normalized shipments, gross profit per unit and competitor response. Output: Share validation."
+    },
+    {
+      "id": "T44",
+      "stage": "Operations",
+      "role": "A11",
+      "gate": "G08",
+      "title": "Model rational resource allocation",
+      "instruction": "Optimize contribution per constrained hour/unit, not price per item; include commitments and financing. Output: Management response."
+    },
+    {
+      "id": "T45",
+      "stage": "Operations",
+      "role": "A11",
+      "gate": "G08",
+      "title": "Test management incentives",
+      "instruction": "Examine compensation, related parties, acquisitions, dilution, capitalized costs and reinvestment returns. Output: Incentive exceptions."
+    },
+    {
+      "id": "T46",
+      "stage": "Financials",
+      "role": "A12",
+      "gate": "G09",
+      "title": "Build multi-period panel",
+      "instruction": "Default: 12 quarters plus five annual periods; include a complete prior supply cycle where material. Output: Comparable panel."
+    },
+    {
+      "id": "T47",
+      "stage": "Financials",
+      "role": "A12",
+      "gate": "G09",
+      "title": "Normalize reporting",
+      "instruction": "Reconcile fiscal calendars, units, share changes, consolidations, tax, acquisition mix and recurring items. Output: Normalization bridge."
+    },
+    {
+      "id": "T48",
+      "stage": "Financials",
+      "role": "A12",
+      "gate": "G09",
+      "title": "Decompose revenue and gross profit",
+      "instruction": "Separate volume, like-for-like price, mix, FX, acquisitions and new products; leave no invented residual. Output: Price-volume-mix bridge."
+    },
+    {
+      "id": "T49",
+      "stage": "Financials",
+      "role": "A12",
+      "gate": "G09",
+      "title": "Build cost and expense cohorts",
+      "instruction": "Map materials, inventory, yield, labor, depreciation, freight, R&D, SBC and financing separately. Output: Forward statements."
+    },
+    {
+      "id": "T50",
+      "stage": "Financials",
+      "role": "A12",
+      "gate": "G09",
+      "title": "Reconcile cash and dilution",
+      "instruction": "Bridge NI to CFO, capex, acquisitions, debt, leases, convertibles, buybacks and period-end cash. Output: Cash/share bridge."
+    },
+    {
+      "id": "T51",
+      "stage": "Validation",
+      "role": "A15",
+      "gate": "G10",
+      "title": "Freeze a holdout quarter",
+      "instruction": "Calibrate with earlier data; test a withheld quarter before incorporating it into the model. Output: Backtest residuals."
+    },
+    {
+      "id": "T52",
+      "stage": "Validation",
+      "role": "A15",
+      "gate": "G10",
+      "title": "Classify deviations",
+      "instruction": "Separate demand, supply, price, mix, share, execution, timing, tax and one-offs. Output: Error attribution."
+    },
+    {
+      "id": "T53",
+      "stage": "Expectations",
+      "role": "A13",
+      "gate": "G12",
+      "title": "Build point-in-time valuation history",
+      "instruction": "Use price and earnings available on that date; handle splits, rights, dividends and updated denominators. Output: Historical PE bridge."
+    },
+    {
+      "id": "T54",
+      "stage": "Expectations",
+      "role": "A13",
+      "gate": "G11",
+      "title": "Keep business and belief states separate",
+      "instruction": "Construct several conditional belief vectors compatible with today's price, not a unique implied consensus. Output: Belief-state map."
+    },
+    {
+      "id": "T55",
+      "stage": "Expectations",
+      "role": "A13",
+      "gate": "G11",
+      "title": "Test already-public information",
+      "instruction": "Identify preannouncements, scheduled events and prior price response; distinguish fact availability from investor understanding. Output: Known/unknown ledger."
+    },
+    {
+      "id": "T56",
+      "stage": "Catalyst",
+      "role": "A14",
+      "gate": "G11",
+      "title": "Map information to recognition",
+      "instruction": "For each in-window event, name the later operating variable and expectation it changes. Output: Catalyst bridge."
+    },
+    {
+      "id": "T57",
+      "stage": "Valuation",
+      "role": "A13",
+      "gate": "G12",
+      "title": "Keep a common earnings denominator",
+      "instruction": "Show price-change decomposition using the same future fiscal year and explicit dilution. Output: Target bridge."
+    },
+    {
+      "id": "T58",
+      "stage": "Valuation",
+      "role": "A13",
+      "gate": "G12",
+      "title": "Cross-check price, cash and market share",
+      "instruction": "Use demand/share economics, suitable multiples and properly discounted cash; reconcile discrepancies. Output: Valuation reconciliation."
+    },
+    {
+      "id": "T59",
+      "stage": "Valuation",
+      "role": "A13",
+      "gate": "G12",
+      "title": "Test cycle/terminal consistency",
+      "instruction": "Growth, reinvestment, ROIC, payout, capex and margins must coexist economically. Output: Duration audit."
+    },
+    {
+      "id": "T60",
+      "stage": "Red team",
+      "role": "A15",
+      "gate": "G13",
+      "title": "Attack the winning premise",
+      "instruction": "Find earlier rival capacity, weaker customer surplus, channel inventory, false exposure and double-counted options. Output: Counter-thesis."
+    },
+    {
+      "id": "T61",
+      "stage": "QA",
+      "role": "A16",
+      "gate": "G14",
+      "title": "Run hard numerical checks",
+      "instruction": "Check mass balance, shares, dates, period subtraction, units, cash and forecast timestamp availability. Output: Audit report."
+    },
+    {
+      "id": "T62",
+      "stage": "Publication",
+      "role": "O00",
+      "gate": "G14",
+      "title": "Publish one point path per eligible candidate",
+      "instruction": "Rank horizon appreciation only; show risks and break-even thresholds separately, without probability weighting. Output: Decision worksheet."
+    },
+    {
+      "id": "T63",
+      "stage": "Monitoring",
+      "role": "O00",
+      "gate": "G14",
+      "title": "Update only changed inputs",
+      "instruction": "Propagate new source facts through dependency graph; log target/rank changes and causes. Output: Versioned change log."
+    },
+    {
+      "id": "T64",
+      "stage": "Postmortem",
+      "role": "A16",
+      "gate": "G14",
+      "title": "Assess without hindsight",
+      "instruction": "Compare operational forecasts, expected belief changes, multiple changes and actual price separately. Output: Learning ledger."
+    },
+    {
+      "id": "T65",
+      "stage": "Corpus",
+      "role": "A17",
+      "gate": "G16",
+      "title": "Create the disclosure universe",
+      "instruction": "List target filings, corrections, acquisition documents, subsidiaries, bonds, notes and all material chain peers by period. Output: Document manifest."
+    },
+    {
+      "id": "T66",
+      "stage": "Corpus",
+      "role": "A17",
+      "gate": "G16",
+      "title": "Enumerate every quantitative disclosure",
+      "instruction": "Capture every amount, ratio, unit, schedule and numeric narrative in scoped documents; record exclusions, unreadable cells and duplicates. Output: Number census."
+    },
+    {
+      "id": "T67",
+      "stage": "Corpus",
+      "role": "A17",
+      "gate": "G16",
+      "title": "Read notes that alter small denominators",
+      "instruction": "Review taxes, inventory provisions, rebates, SBC, receivable terms, guarantees, covenants, leases, factoring and capitalized costs even when small. Output: Footnote-to-driver map."
+    },
+    {
+      "id": "T68",
+      "stage": "Corpus",
+      "role": "A01",
+      "gate": "G18",
+      "title": "Preserve original and restated versions",
+      "instruction": "Store first release and each correction; never replace original forecast labels silently with restated financials. Output: Vintage ledger."
+    },
+    {
+      "id": "T69",
+      "stage": "Corpus",
+      "role": "A17",
+      "gate": "G16",
+      "title": "Diff consecutive report wording",
+      "instruction": "Compare changes in delivery language, price terms, capacity milestones, customer concentrations and removed disclosures. Output: Text and table change log."
+    },
+    {
+      "id": "T70",
+      "stage": "Coverage",
+      "role": "A23",
+      "gate": "G23",
+      "title": "Expand related-company coverage adaptively",
+      "instruction": "Start with buyers, suppliers and rivals; recursively follow any newly revealed material dependencies or substitute capacities. Output: Exposure graph."
+    },
+    {
+      "id": "T71",
+      "stage": "Coverage",
+      "role": "A23",
+      "gate": "G23",
+      "title": "Document original source independence",
+      "instruction": "Group syndicated reports, repeated management quotes and commissioned research under their originating evidence cluster. Output: Origin map."
+    },
+    {
+      "id": "T72",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Segment the economic decision maker",
+      "instruction": "Separate operator, budget holder, OEM, channel, end user and regulator; identify who gains and who pays. Output: Customer decision map."
+    },
+    {
+      "id": "T73",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Compare feasible alternatives",
+      "instruction": "Price incumbent renewal, defer, internal build, substitute product and best challenger under identical workload and lifecycle. Output: Choice set."
+    },
+    {
+      "id": "T74",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Model adoption and switching separately",
+      "instruction": "Separate initial introduction, incumbent-exit friction and future exit cost; include dual-running, financing, certification and retraining. Output: Incremental NPV."
+    },
+    {
+      "id": "T75",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Derive willingness-to-pay ceilings",
+      "instruction": "Solve price that leaves hurdle NPV/payback satisfied; distinguish total ecosystem surplus from supplier pricing capture. Output: Reservation-price schedule."
+    },
+    {
+      "id": "T76",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Translate ROI to fundable cohorts",
+      "instruction": "Identify budgets, capex cycles, procurement deadlines, minimum return and cash affordability before allocating adoption. Output: Funded demand cohorts."
+    },
+    {
+      "id": "T77",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G15",
+      "title": "Apply physical deployment bottlenecks",
+      "instruction": "Cap economic demand by integrators, power, permits, reliability validation, personnel, components and allowed commissioning slots. Output: Deployable demand."
+    },
+    {
+      "id": "T78",
+      "stage": "Customer",
+      "role": "A18",
+      "gate": "G17",
+      "title": "Model replacement, deferral and cannibalization",
+      "instruction": "Track installed stock age, early replacement, reuse, competing generations and retirements; count each opportunity once. Output: Stock-flow model."
+    },
+    {
+      "id": "T79",
+      "stage": "Dynamics",
+      "role": "A19",
+      "gate": "G17",
+      "title": "Choose timescales by economics",
+      "instruction": "Use event/daily clocks for shocks, monthly near-term operations, quarterly finances and annual lifecycle; never stop at price horizon. Output: Calendar and bridge."
+    },
+    {
+      "id": "T80",
+      "stage": "Dynamics",
+      "role": "A19",
+      "gate": "G17",
+      "title": "Link learning curves to adoption",
+      "instruction": "Estimate cost/yield learning from pre-cutoff history; let price declines expand addressable cohorts without assuming perfect supplier capture. Output: Endogenous adoption curve."
+    },
+    {
+      "id": "T81",
+      "stage": "Dynamics",
+      "role": "A19",
+      "gate": "G17",
+      "title": "Model rivals' constrained responses",
+      "instruction": "Allocate shared capacity by contribution per bottleneck-hour and funded expansion NPV, with contracts and incentive constraints. Output: Response ledger."
+    },
+    {
+      "id": "T82",
+      "stage": "Dynamics",
+      "role": "A19",
+      "gate": "G17",
+      "title": "Check equilibrium and conservation",
+      "instruction": "Reconcile supplies, purchases, stocks and consumption; rerun customer choice after pricing changes; report no-convergence instead of forcing a price. Output: Balance audit."
+    },
+    {
+      "id": "T83",
+      "stage": "Shocks",
+      "role": "A19",
+      "gate": "G21",
+      "title": "Register anticipated new factors",
+      "instruction": "Before each forecast, enumerate announced price letters, contract renewals, shutdowns, capacity starts, funding maturities, subsidies, FX hedges and taxes. Output: New-factor register."
+    },
+    {
+      "id": "T84",
+      "stage": "Shocks",
+      "role": "A19",
+      "gate": "G21",
+      "title": "Separate expectation from physical effect",
+      "instruction": "Store announcement, effective date, delivery, COGS recognition, cash and investor-recognition dates independently. Output: Transmission schedule."
+    },
+    {
+      "id": "T85",
+      "stage": "Shocks",
+      "role": "A19",
+      "gate": "G21",
+      "title": "Model amplitude, duration and recovery",
+      "instruction": "Specify evidence-based intensity, exposure, decay/ramp and management response; distinguish transitory levels from structural slope changes. Output: Shock kernel."
+    },
+    {
+      "id": "T86",
+      "stage": "Shocks",
+      "role": "A15",
+      "gate": "G21",
+      "title": "Stress events not forecastable ex ante",
+      "instruction": "Apply deterministic exposure tests for unannounced interruptions or customer loss; label them stresses, not primary-path predictions. Output: Fragility tests."
+    },
+    {
+      "id": "T87",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Declare forecast lanes",
+      "instruction": "Separate unguided structural forecast, guidance-assisted nowcast, post-release attribution and forward paper test. Output: Lane registry."
+    },
+    {
+      "id": "T88",
+      "stage": "Validation",
+      "role": "A22",
+      "gate": "G18",
+      "title": "Enforce source lineage recursively",
+      "instruction": "An input is unavailable if any required ancestor or revised version became public after forecast origin. Output: Availability graph."
+    },
+    {
+      "id": "T89",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Design chronological splits",
+      "instruction": "With adequate history use a 20-quarter training, 4-quarter validation, 4-quarter sealed test illustration; adjust to real economic cycle. Output: Split manifest."
+    },
+    {
+      "id": "T90",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Define grouped and regime holdouts",
+      "instruction": "Group issuer families and tightly linked programs when testing transfer; reserve entire adverse and expansion regimes rather than isolated lucky quarters. Output: Group/regime map."
+    },
+    {
+      "id": "T91",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Purge overlapping target information",
+      "instruction": "Exclude training labels not available by each origin and remove overlaps in target intervals; use embargo only for identified leakage paths. Output: Purged split audit."
+    },
+    {
+      "id": "T92",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Select benchmarks and metrics in advance",
+      "instruction": "Use seasonal naive, run-rate and guidance baselines; define revenue errors, margin-bps errors, EPS dollar errors and cash-flow errors. Output: Metric contract."
+    },
+    {
+      "id": "T93",
+      "stage": "Validation",
+      "role": "A20",
+      "gate": "G19",
+      "title": "Lock the feature and prompt search budget",
+      "instruction": "Record every tried structural model, prompt version and hyperparameter choice; do not select retrospectively on the final test. Output: Experiment registry."
+    },
+    {
+      "id": "T94",
+      "stage": "Validation",
+      "role": "A22",
+      "gate": "G18",
+      "title": "Seal target access",
+      "instruction": "Enforce separate input and label paths, evaluator-only permissions and redacted tool responses; do not trust prompt instructions as an access boundary. Output: Access manifest."
+    },
+    {
+      "id": "T95",
+      "stage": "Validation",
+      "role": "A21",
+      "gate": "G20",
+      "title": "Freeze and hash each forecast",
+      "instruction": "Save source versions, model code, prompts, parameters, seed, horizon and predictions before a target result is accessible. Output: Forecast receipt."
+    },
+    {
+      "id": "T96",
+      "stage": "Validation",
+      "role": "A21",
+      "gate": "G20",
+      "title": "Score once and preserve the result",
+      "instruction": "Evaluate sealed targets under registered metrics; any later retuning begins a new experiment and cannot reuse the same test as pristine. Output: Blind evaluation."
+    },
+    {
+      "id": "T97",
+      "stage": "Validation",
+      "role": "A22",
+      "gate": "G24",
+      "title": "Audit LLM historical contamination",
+      "instruction": "Mark all retrospective LLM tests as contamination-sensitive unless historical outcomes could not be known; prefer prospective shadow tests. Output: Contamination disclosure."
+    },
+    {
+      "id": "T98",
+      "stage": "Validation",
+      "role": "A21",
+      "gate": "G24",
+      "title": "Run prospective paper forecasts",
+      "instruction": "Before each future release, archive predictions and input packet; score when public results arrive without respecifying the old forecast. Output: Forward record."
+    },
+    {
+      "id": "T99",
+      "stage": "Validation",
+      "role": "A12",
+      "gate": "G20",
+      "title": "Separate as-reported and restated error",
+      "instruction": "Score first-public actuals for announcement prediction and subsequently restated outcomes for economic truth, with separate series. Output: Dual-label score."
+    },
+    {
+      "id": "T100",
+      "stage": "Validation",
+      "role": "A21",
+      "gate": "G22",
+      "title": "Detect compensating errors",
+      "instruction": "Check volume/price/cost/tax/share forecasts individually even when aggregate EPS is accurate. Output: Driver error bridge."
+    },
+    {
+      "id": "T101",
+      "stage": "Validation",
+      "role": "A21",
+      "gate": "G22",
+      "title": "Attribute shocks without hindsight rescue",
+      "instruction": "Explain post-release changes in an attribution notebook only; keep the original blind loss and label new evidence after-origin. Output: Postmortem."
+    },
+    {
+      "id": "T102",
+      "stage": "Finance",
+      "role": "A12",
+      "gate": "G16",
+      "title": "Build a change driver for every material line",
+      "instruction": "Map price, units, FX, tax, useful lives, rebates, cost cohorts, cash timings and consolidation; residuals stay explicit. Output: Line-item driver tree."
+    },
+    {
+      "id": "T103",
+      "stage": "Finance",
+      "role": "A12",
+      "gate": "G22",
+      "title": "Reconcile cash with commercial timing",
+      "instruction": "Use payment contracts and actual collection history; advances, factoring and notes are not revenue or automatic bargaining power. Output: Cash mechanism."
+    },
+    {
+      "id": "T104",
+      "stage": "Finance",
+      "role": "A12",
+      "gate": "G23",
+      "title": "Audit incentives and related entities",
+      "instruction": "Follow parent/subsidiary value capture, transfer pricing, external contracts, minority interests and capital allocation. Output: Entity economics."
+    },
+    {
+      "id": "T105",
+      "stage": "Expectations",
+      "role": "A13",
+      "gate": "G22",
+      "title": "Maintain identical-year expectations bridges",
+      "instruction": "Keep current inferred and target beliefs on the same fiscal EPS year; distinguish earnings revisions, discounting, multiple changes and interaction. Output: Price bridge."
+    },
+    {
+      "id": "T106",
+      "stage": "Expectations",
+      "role": "A14",
+      "gate": "G17",
+      "title": "Test information beyond the price window",
+      "instruction": "Identify pre-horizon disclosures about late-period capacity or adoption; do not discard later economics because realized revenue is outside window. Output: Recognition map."
+    },
+    {
+      "id": "T107",
+      "stage": "Coverage",
+      "role": "A23",
+      "gate": "G23",
+      "title": "Rank remaining research questions",
+      "instruction": "Prioritize missing inputs by eligibility effect, target sensitivity and ability to reverse finalist ordering—not source volume. Output: Search queue."
+    },
+    {
+      "id": "T108",
+      "stage": "Coverage",
+      "role": "A23",
+      "gate": "G23",
+      "title": "Log negative and absent disclosures",
+      "instruction": "Capture discontinued KPIs, denials, cancellations, contradictions and searched-but-unavailable fields with scope and dates. Output: Missingness audit."
+    },
+    {
+      "id": "T109",
+      "stage": "QA",
+      "role": "A16",
+      "gate": "G16",
+      "title": "Audit source-to-cell traceability",
+      "instruction": "Every reported numeric input maps to a fact and source locator; every modeled number maps to an assumption, formula and sensitivity. Output: Lineage check."
+    },
+    {
+      "id": "T110",
+      "stage": "QA",
+      "role": "A16",
+      "gate": "G24",
+      "title": "Run synthetic mutation tests",
+      "instruction": "Reject future sources, derived leakage, unsealed tests, material untriaged numbers, adoption over deployment capacity and invalid units. Output: Validator report."
+    },
+    {
+      "id": "T111",
+      "stage": "QA",
+      "role": "A15",
+      "gate": "G23",
+      "title": "Re-evaluate the decision boundary",
+      "instruction": "Do not allow best-looking model fit to override missing material economics; compare eligibility and target separately. Output: Challenge verdict."
+    },
+    {
+      "id": "T112",
+      "stage": "Publication",
+      "role": "O00",
+      "gate": "G24",
+      "title": "Publish evidence coverage and test posture",
+      "instruction": "Show corpus scope, coverage limitations, forecast lane, holdout performance and contamination status next to the point target. Output: Research packet."
+    },
+    {
+      "id": "T113",
+      "stage": "Publication",
+      "role": "A16",
+      "gate": "G22",
+      "title": "Produce a change-attribution release",
+      "instruction": "Explain how new source evidence changed demand, prices, margins, cash, expectations and target; preserve all prior versions. Output: Version delta."
+    },
+    {
+      "id": "T114",
+      "stage": "Publication",
+      "role": "O00",
+      "gate": "G24",
+      "title": "Retain a no-winner outcome",
+      "instruction": "Do not force a ranked winner when a missing fact or failed validation decides ordering; publish the blocking question. Output: Eligibility decision."
+    }
+  ]
+}

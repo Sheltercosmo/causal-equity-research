@@ -1,0 +1,993 @@
+{
+  "source": "../assets/Causal_Equity_Research_Workbook_v2.xlsx",
+  "sheets": [
+    {
+      "sheet": "00_Start",
+      "purpose": null,
+      "headers": {},
+      "populated_cells": 210,
+      "synthetic": false
+    },
+    {
+      "sheet": "01_Run_Contract",
+      "purpose": "Immutable objective and point-in-time rules. Fill required fields before opening the candidate funnel.",
+      "headers": {
+        "A5": "Field",
+        "B5": "Value",
+        "C5": "Definition / operating rule",
+        "D5": "Owner",
+        "E5": "Requirement"
+      },
+      "populated_cells": 144,
+      "synthetic": false
+    },
+    {
+      "sheet": "02_Agents",
+      "purpose": "24 role contracts, including disclosure census, adoption, dynamics, validation, sealed evaluation and data custody.",
+      "headers": {
+        "A5": "Agent ID",
+        "B5": "Role",
+        "C5": "Assignment",
+        "D5": "Inputs",
+        "E5": "Required outputs",
+        "F5": "Prohibited shortcut",
+        "G5": "Exit criterion"
+      },
+      "populated_cells": 177,
+      "synthetic": false
+    },
+    {
+      "sheet": "03_Checklist",
+      "purpose": "114 research tasks. Completion requires evidence, chronology and causal identification—not tool-call or document counts.",
+      "headers": {
+        "A5": "Task ID",
+        "B5": "Workstream",
+        "C5": "Owner",
+        "D5": "Question",
+        "E5": "Research procedure",
+        "F5": "Preferred evidence",
+        "G5": "Deliverable",
+        "H5": "Gate",
+        "I5": "Status",
+        "J5": "Reviewer note"
+      },
+      "populated_cells": 1038,
+      "synthetic": false
+    },
+    {
+      "sheet": "04_Universe",
+      "purpose": "Candidate funnel. Keep rejects and watchlist names so breadth and omissions remain visible.",
+      "headers": {
+        "A5": "Candidate ID",
+        "B5": "Issuer / ticker",
+        "C5": "Share class",
+        "D5": "Market pool",
+        "E5": "Return mechanism",
+        "F5": "Exposure evidence",
+        "G5": "First rejection test",
+        "H5": "Research depth",
+        "I5": "Stage",
+        "J5": "Why advance / reject",
+        "K5": "Source IDs"
+      },
+      "populated_cells": 103,
+      "synthetic": false
+    },
+    {
+      "sheet": "05_Sources",
+      "purpose": "Original-source registry. Date and origin are as important as document quantity.",
+      "headers": {
+        "A5": "Source ID",
+        "B5": "Issuer / owner",
+        "C5": "Role in chain",
+        "D5": "Document / dataset",
+        "E5": "Original URL / path",
+        "F5": "Exact locator",
+        "G5": "Observed period",
+        "H5": "Published at",
+        "I5": "Retrieved at",
+        "J5": "First public at",
+        "K5": "Origin cluster",
+        "L5": "Revision / supersedes",
+        "M5": "Primary / secondary",
+        "N5": "Freshness status",
+        "O5": "Access limitation"
+      },
+      "populated_cells": 37,
+      "synthetic": false
+    },
+    {
+      "sheet": "06_Claims",
+      "purpose": "Atomic claims with explicit provenance. No source identifier is evidence until its document is verified.",
+      "headers": {
+        "A5": "Claim ID",
+        "B5": "Candidate / market",
+        "C5": "Claim / metric",
+        "D5": "Value or statement",
+        "E5": "Unit / basis",
+        "F5": "Period",
+        "G5": "Type",
+        "H5": "Source IDs / locator",
+        "I5": "Derivation / assumptions",
+        "J5": "Independent corroboration",
+        "K5": "Contradiction ID",
+        "L5": "Target-impact test",
+        "M5": "Status",
+        "N5": "Owner"
+      },
+      "populated_cells": 66,
+      "synthetic": false
+    },
+    {
+      "sheet": "07_Clue_Graph",
+      "purpose": "Every meaningful detail must attach to a causal edge, lag, model parameter and falsification test.",
+      "headers": {
+        "A5": "Clue ID",
+        "B5": "Source / claim IDs",
+        "C5": "Observed clue",
+        "D5": "Cause node",
+        "E5": "Effect node",
+        "F5": "Mechanism / sign",
+        "G5": "Lag",
+        "H5": "Affected parameter",
+        "I5": "Independent test",
+        "J5": "Alternative explanation",
+        "K5": "Target impact",
+        "L5": "Next query",
+        "M5": "Disposition"
+      },
+      "populated_cells": 35,
+      "synthetic": false
+    },
+    {
+      "sheet": "08_Macro",
+      "purpose": "Trace each macro variable to a company parameter and time lag; no generic macro essay.",
+      "headers": {
+        "A5": "Driver",
+        "B5": "Research items",
+        "C5": "Operating transmission",
+        "D5": "Common trap",
+        "E5": "Independent evidence",
+        "F5": "Owner",
+        "G5": "Current conclusion"
+      },
+      "populated_cells": 69,
+      "synthetic": false
+    },
+    {
+      "sheet": "09_Chain_Map",
+      "purpose": "Map physical transformations AND payments. Capacity and demand must use comparable units.",
+      "headers": {
+        "A5": "Node ID",
+        "B5": "Entity / stage",
+        "C5": "Product grade",
+        "D5": "Region",
+        "E5": "Unit",
+        "F5": "Upstream node",
+        "G5": "Downstream node",
+        "H5": "Input per output",
+        "I5": "Inventory owner",
+        "J5": "Payment terms",
+        "K5": "Bottleneck resource",
+        "L5": "Substitutes",
+        "M5": "Source IDs"
+      },
+      "populated_cells": 35,
+      "synthetic": false
+    },
+    {
+      "sheet": "10_Period_Panel",
+      "purpose": "Long-format historical panel. Default 12 quarters and five annual periods for the target and material chain peers.",
+      "headers": {
+        "A5": "Record ID",
+        "B5": "Entity",
+        "C5": "Chain role",
+        "D5": "Fiscal period",
+        "E5": "Metric",
+        "F5": "Value",
+        "G5": "Unit",
+        "H5": "Reported / recurring",
+        "I5": "Scope / consolidation",
+        "J5": "Published at",
+        "K5": "Source / locator",
+        "L5": "Normalization note",
+        "M5": "Holdout?"
+      },
+      "populated_cells": 55,
+      "synthetic": false
+    },
+    {
+      "sheet": "11_Demand",
+      "purpose": "Physical consumption model. Inventory demand is separate; financing/complement constraints require an additional check.",
+      "headers": {
+        "A5": "Row ID",
+        "B5": "Application / grade",
+        "C5": "Period",
+        "D5": "Deployments (units)",
+        "E5": "Attach rate",
+        "F5": "Content per device",
+        "G5": "Downstream yield",
+        "H5": "Production input need",
+        "I5": "Replacement units",
+        "J5": "Inventory change",
+        "K5": "Effective demand",
+        "L5": "Standard unit",
+        "M5": "Source IDs",
+        "N5": "Assumption note"
+      },
+      "populated_cells": 76,
+      "synthetic": false
+    },
+    {
+      "sheet": "12_Capacity",
+      "purpose": "Per-stage effective output. Do not sum stages in series or duplicate outsourced/captive production.",
+      "headers": {
+        "A5": "Project ID",
+        "B5": "Company / plant",
+        "C5": "Grade / region",
+        "D5": "Period",
+        "E5": "Project stage",
+        "F5": "Annual nameplate",
+        "G5": "Periods per year",
+        "H5": "Active-period fraction",
+        "I5": "Grade allocation",
+        "J5": "Uptime",
+        "K5": "Good yield",
+        "L5": "Qualified fraction",
+        "M5": "Effective period output",
+        "N5": "Standard unit",
+        "O5": "First qualified sale",
+        "P5": "Source IDs",
+        "Q5": "Constraint / change note"
+      },
+      "populated_cells": 69,
+      "synthetic": false
+    },
+    {
+      "sheet": "13_Grade_Balance",
+      "purpose": "Grade-specific stock-flow balance. A deficit is a signal, not proof of a specific future price.",
+      "headers": {
+        "A5": "Balance ID",
+        "B5": "Grade / region",
+        "C5": "Period",
+        "D5": "Opening inventory",
+        "E5": "Qualified output",
+        "F5": "Imports",
+        "G5": "Exports",
+        "H5": "Consumption demand",
+        "I5": "Closing inventory",
+        "J5": "Desired closing inventory",
+        "K5": "Inventory surplus / deficit",
+        "L5": "Standard unit",
+        "M5": "Capacity IDs",
+        "N5": "Demand IDs",
+        "O5": "Constraint resolution"
+      },
+      "populated_cells": 77,
+      "synthetic": false
+    },
+    {
+      "sheet": "14_Contracts",
+      "purpose": "Order cohort pricing. Mark VAT/freight/FX explicitly; recognized price differs from quoted price.",
+      "headers": {
+        "A5": "Cohort ID",
+        "B5": "Company / product",
+        "C5": "Order date",
+        "D5": "Delivery period",
+        "E5": "Units delivered",
+        "F5": "Quoted unit price",
+        "G5": "VAT rate",
+        "H5": "Discount per unit",
+        "I5": "Freight excluded / unit",
+        "J5": "FX to report currency",
+        "K5": "Net unit price",
+        "L5": "Recognized revenue",
+        "M5": "Fixed / indexed / spot",
+        "N5": "Input-cost vintage",
+        "O5": "Source IDs",
+        "P5": "Timing / customer terms"
+      },
+      "populated_cells": 78,
+      "synthetic": false
+    },
+    {
+      "sheet": "15_Rational_Response",
+      "purpose": "Constrained decision-making. Proposed responses are forecasts, not facts; verify incentives and implementation.",
+      "headers": {
+        "A5": "Response ID",
+        "B5": "Actor",
+        "C5": "Decision",
+        "D5": "Objective / incentive",
+        "E5": "Binding constraint",
+        "F5": "Marginal economics",
+        "G5": "Trigger",
+        "H5": "Response lag",
+        "I5": "Observed action",
+        "J5": "Counterparty response",
+        "K5": "Affected model variables",
+        "L5": "Evidence / status"
+      },
+      "populated_cells": 29,
+      "synthetic": false
+    },
+    {
+      "sheet": "16_Technology",
+      "purpose": "Match benchmarks before comparing suppliers. Primary papers validate mechanisms, not automatically market share.",
+      "headers": {
+        "A5": "Test ID",
+        "B5": "Application / workload",
+        "C5": "Supplier / alternative",
+        "D5": "Claimed metric",
+        "E5": "System boundary",
+        "F5": "Matched conditions",
+        "G5": "Measured result",
+        "H5": "Maturity",
+        "I5": "Independent validation",
+        "J5": "Adoption burden",
+        "K5": "Best counterexample",
+        "L5": "Source IDs",
+        "M5": "Judgment"
+      },
+      "populated_cells": 35,
+      "synthetic": false
+    },
+    {
+      "sheet": "17_Customer_TCO",
+      "purpose": "Customer economics by use case. Keep cash savings, redeployment and capacity-equivalent benefits distinct.",
+      "headers": {
+        "A5": "Case ID",
+        "B5": "Customer segment",
+        "C5": "Product / alternative",
+        "D5": "Incremental upfront cost",
+        "E5": "Annual labor cash saving",
+        "F5": "Annual incremental contribution",
+        "G5": "Annual avoided loss",
+        "H5": "Annual added operating cost",
+        "I5": "Years",
+        "J5": "Discount rate",
+        "K5": "Net annual benefit",
+        "L5": "Payback years",
+        "M5": "PV of net benefits",
+        "N5": "Customer NPV",
+        "O5": "Benefit/cost ratio",
+        "P5": "Source / assumption"
+      },
+      "populated_cells": 108,
+      "synthetic": false
+    },
+    {
+      "sheet": "18_Share_Cohorts",
+      "purpose": "Market share is built from customer programs, not selected to make a price target work.",
+      "headers": {
+        "A5": "Cohort ID",
+        "B5": "Customer / program",
+        "C5": "Application / geography",
+        "D5": "Eligible annual units",
+        "E5": "Commercial stage",
+        "F5": "Qualified supplier units",
+        "G5": "Capacity-constrained deliverable units",
+        "H5": "Forecast shipped units",
+        "I5": "Capture share",
+        "J5": "Price / content",
+        "K5": "Forecast revenue",
+        "L5": "Renewal / reuse",
+        "M5": "Competitor / loss evidence",
+        "N5": "Source IDs",
+        "O5": "Status"
+      },
+      "populated_cells": 77,
+      "synthetic": false
+    },
+    {
+      "sheet": "19_Model_Drivers",
+      "purpose": "One registry for every forecast input. Missing values remain missing, not zero or arbitrary haircuts.",
+      "headers": {
+        "A5": "Parameter ID",
+        "B5": "Candidate / market",
+        "C5": "Variable",
+        "D5": "Period",
+        "E5": "Base value",
+        "F5": "Unit",
+        "G5": "Claim IDs",
+        "H5": "Derivation / mechanism",
+        "I5": "Classification",
+        "J5": "Owner",
+        "K5": "Counterfactual delta",
+        "L5": "Target/rank impact",
+        "M5": "Break-even threshold",
+        "N5": "Refresh trigger"
+      },
+      "populated_cells": 46,
+      "synthetic": false
+    },
+    {
+      "sheet": "21_Market_Beliefs",
+      "purpose": "Reverse valuation is conditional. Do not claim a unique consensus from one observed price.",
+      "headers": {
+        "A5": "Belief ID",
+        "B5": "Candidate",
+        "C5": "Belief variable",
+        "D5": "Current conditional belief",
+        "E5": "Own operating view",
+        "F5": "Direct support for market belief",
+        "G5": "Information arriving by horizon",
+        "H5": "Long-term variable revised",
+        "I5": "Already public?",
+        "J5": "Alternative belief explanation",
+        "K5": "Model/claim IDs",
+        "L5": "Status"
+      },
+      "populated_cells": 29,
+      "synthetic": false
+    },
+    {
+      "sheet": "22_PE_History",
+      "purpose": "Use the earnings known at each date. Keep reported, recurring and fixed-year forward denominators separate.",
+      "headers": {
+        "A5": "Observation ID",
+        "B5": "Price timestamp",
+        "C5": "Adjusted price",
+        "D5": "Contemporaneous diluted shares",
+        "E5": "Reported TTM NI",
+        "F5": "Recurring TTM NI",
+        "G5": "Reported PE",
+        "H5": "Recurring PE",
+        "I5": "Fixed forward year",
+        "J5": "Forward EPS known then",
+        "K5": "Fixed-year forward PE",
+        "L5": "Disclosure / corporate action",
+        "M5": "Price source",
+        "N5": "Earnings source",
+        "O5": "Comparability note"
+      },
+      "populated_cells": 97,
+      "synthetic": false
+    },
+    {
+      "sheet": "23_Catalysts",
+      "purpose": "The information must arrive inside the price window; the economics it changes can occur years later.",
+      "headers": {
+        "A5": "Event ID",
+        "B5": "Candidate",
+        "C5": "Event",
+        "D5": "Expected publication date",
+        "E5": "Confirmed / inferred",
+        "F5": "Operating period affected",
+        "G5": "Already in public expectations",
+        "H5": "What specifically would be learned",
+        "I5": "Model parameter changed",
+        "J5": "Belief change",
+        "K5": "Price route / delay",
+        "L5": "Source IDs",
+        "M5": "Deadline status"
+      },
+      "populated_cells": 35,
+      "synthetic": false
+    },
+    {
+      "sheet": "24_Targets",
+      "purpose": "Only eligible candidates are ranked. Same cutoff, horizon and share convention; no quality/risk-weighted ranking.",
+      "headers": {
+        "A5": "Candidate ID",
+        "B5": "Issuer / ticker",
+        "C5": "Price as of",
+        "D5": "Target session",
+        "E5": "Current price",
+        "F5": "Common earnings year",
+        "G5": "Current belief EPS",
+        "H5": "Target belief EPS",
+        "I5": "Target PE",
+        "J5": "Current PE same year",
+        "K5": "Target price",
+        "L5": "Price upside",
+        "M5": "Evidence gates",
+        "N5": "Rank among eligible",
+        "O5": "Catalyst IDs",
+        "P5": "Valuation model IDs"
+      },
+      "populated_cells": 138,
+      "synthetic": false
+    },
+    {
+      "sheet": "25_Red_Team",
+      "purpose": "Contradictions stay open until resolved. No averaging incompatible facts or retrofitting the target.",
+      "headers": {
+        "A5": "Issue ID",
+        "B5": "Candidate / market",
+        "C5": "Challenged claim",
+        "D5": "Opposing evidence",
+        "E5": "Impact on model",
+        "F5": "Alternative causal explanation",
+        "G5": "Required resolving evidence",
+        "H5": "Owner",
+        "I5": "Status",
+        "J5": "Resolution / version"
+      },
+      "populated_cells": 52,
+      "synthetic": false
+    },
+    {
+      "sheet": "26_Monitor_Log",
+      "purpose": "This sheet records future checks; it does not schedule or perform background monitoring.",
+      "headers": {
+        "A5": "Update ID",
+        "B5": "Timestamp",
+        "C5": "Candidate",
+        "D5": "New source ID",
+        "E5": "Parameter / claim changed",
+        "F5": "Old value",
+        "G5": "New value",
+        "H5": "Causal propagation",
+        "I5": "Old target",
+        "J5": "New target",
+        "K5": "Ranking change",
+        "L5": "Action / owner"
+      },
+      "populated_cells": 34,
+      "synthetic": false
+    },
+    {
+      "sheet": "27_Postmortem",
+      "purpose": "Separate business forecast accuracy, recognition timing and market-price error. Preserve the original model.",
+      "headers": {
+        "A5": "Review ID",
+        "B5": "Candidate / period",
+        "C5": "Frozen forecast ID",
+        "D5": "Metric",
+        "E5": "Forecast",
+        "F5": "Actual",
+        "G5": "Forecast error",
+        "H5": "Demand / supply / share / execution / accounting",
+        "I5": "Expected information event",
+        "J5": "Observed recognition",
+        "K5": "Valuation residual",
+        "L5": "What rule changes",
+        "M5": "Evidence IDs"
+      },
+      "populated_cells": 35,
+      "synthetic": false
+    },
+    {
+      "sheet": "20_Financial_Model",
+      "purpose": "Template, not a live model. Populate all required inputs (including known zeros). All amounts use one stated currency scale; share counts use the matching scale. R&D/selling/admin inputs INCLUDE SBC; the SBC memo is never deducted twice.",
+      "headers": {
+        "A5": "Metric / consistent units",
+        "B5": "Q+0",
+        "C5": "Q+1",
+        "D5": "Q+2",
+        "E5": "Q+3",
+        "F5": "Q+4",
+        "G5": "Q+5",
+        "H5": "Q+6",
+        "I5": "Q+7",
+        "K5": "Metric group",
+        "L5": "Source/claim IDs",
+        "M5": "Measurement rule"
+      },
+      "populated_cells": 242,
+      "synthetic": false
+    },
+    {
+      "sheet": "28_Synthetic_Demo",
+      "purpose": "Purpose: verify the causal arithmetic without importing any prior stock figures. Inputs are deliberately invented. Supply gaps do not automatically determine prices; target PE is illustrative, not an investment recommendation.",
+      "headers": {
+        "A5": "Metric",
+        "B5": "Synthetic input",
+        "C5": "Calculated output",
+        "D5": "Unit",
+        "E5": "Interpretation / boundary",
+        "F5": "Source / provenance"
+      },
+      "populated_cells": 411,
+      "synthetic": true
+    },
+    {
+      "sheet": "29_Quality_Gates",
+      "purpose": "Gate completion and synthetic arithmetic are separate. Passing the demo does not establish any investment thesis. Final eligibility requires the assigned reviewers to verify live evidence and resolve material objections.",
+      "headers": {
+        "A5": "ID",
+        "B5": "Type",
+        "C5": "Requirement / test",
+        "D5": "Owner",
+        "E5": "Status",
+        "F5": "Evidence / expected output",
+        "G5": "Action"
+      },
+      "populated_cells": 227,
+      "synthetic": false
+    },
+    {
+      "sheet": "30_V2_Upgrade",
+      "purpose": "Start here for the new research sequence. Template only; blank inputs do not become zero forecasts.",
+      "headers": {
+        "A5": "Module",
+        "B5": "Purpose",
+        "C5": "Owner",
+        "D5": "Open sheet",
+        "E5": "Completion evidence"
+      },
+      "populated_cells": 57,
+      "synthetic": false
+    },
+    {
+      "sheet": "31_Document_Map",
+      "purpose": "One row per document/version. Track pages and notes actually read, not just search hits.",
+      "headers": {
+        "A5": "Doc ID",
+        "B5": "Entity / role",
+        "C5": "Period",
+        "D5": "Document type",
+        "E5": "Version",
+        "F5": "First public UTC",
+        "G5": "Locator / URL",
+        "H5": "Pages / tables expected",
+        "I5": "Pages / tables reviewed",
+        "J5": "Critical sections outstanding",
+        "K5": "Read status",
+        "L5": "Reviewer"
+      },
+      "populated_cells": 14,
+      "synthetic": false
+    },
+    {
+      "sheet": "32_Number_Census",
+      "purpose": "Account for amounts, ratios, schedules and important textual qualifiers. Every exclusion needs a reason; critical gaps block eligibility.",
+      "headers": {
+        "A5": "Fact ID",
+        "B5": "Doc/version + locator",
+        "C5": "Entity / scope",
+        "D5": "Metric / raw text",
+        "E5": "Value",
+        "F5": "Unit/currency",
+        "G5": "Period",
+        "H5": "Public UTC",
+        "I5": "Disposition",
+        "J5": "Critical?",
+        "K5": "Model node",
+        "L5": "Exclusion or conflict reason",
+        "M5": "Reviewer"
+      },
+      "populated_cells": 15,
+      "synthetic": false
+    },
+    {
+      "sheet": "33_Customer_Choices",
+      "purpose": "Compare with the best feasible alternative. Price in customer currency; all costs are incremental, not sunk. Keep benefits non-overlapping.",
+      "headers": {
+        "A5": "Cohort",
+        "B5": "Best alternative",
+        "C5": "Upfront + switching cost",
+        "D5": "Annual cash benefit",
+        "E5": "Annual incremental cost",
+        "F5": "Life (years)",
+        "G5": "Customer hurdle",
+        "H5": "Payback limit (years)",
+        "I5": "Available budget",
+        "J5": "NPV",
+        "K5": "Payback (years)",
+        "L5": "Economic/budget gate",
+        "M5": "Source IDs / alternatives"
+      },
+      "populated_cells": 60,
+      "synthetic": false
+    },
+    {
+      "sheet": "34_Adoption_Funnel",
+      "purpose": "Use nested cohort counts or explicit customer-set intersections. The minimum of unrelated totals is not an observed adoption count.",
+      "headers": {
+        "A5": "Cohort",
+        "B5": "Period",
+        "C5": "Economically eligible",
+        "D5": "Funded and approved",
+        "E5": "Qualified and ready",
+        "F5": "Integrator slots",
+        "G5": "Complement slots",
+        "H5": "Supplier good units",
+        "I5": "Nested populations?",
+        "J5": "Deployable units",
+        "K5": "Installed opening",
+        "L5": "Retired units",
+        "M5": "Installed closing",
+        "N5": "Source / assumption"
+      },
+      "populated_cells": 46,
+      "synthetic": false
+    },
+    {
+      "sheet": "35_Demand_Sources",
+      "purpose": "Trace final consumption, procurement and revenue separately. A proxy is not a disclosed customer relationship.",
+      "headers": {
+        "A5": "Cohort / project",
+        "B5": "Buyer + beneficiary",
+        "C5": "End-use need",
+        "D5": "Annual units / stock",
+        "E5": "Funded?",
+        "F5": "Procurement window",
+        "G5": "Product attachment",
+        "H5": "Content per unit",
+        "I5": "Qualification",
+        "J5": "Complement bottleneck",
+        "K5": "Direct or proxy",
+        "L5": "Source IDs",
+        "M5": "Period / lag",
+        "N5": "Duplicate-order key"
+      },
+      "populated_cells": 16,
+      "synthetic": false
+    },
+    {
+      "sheet": "36_Event_Shocks",
+      "purpose": "Register known changes before forecasting. Unknown stresses are diagnostics; future realized inputs cannot repair an old prediction.",
+      "headers": {
+        "A5": "Event ID",
+        "B5": "Knowledge class",
+        "C5": "First public UTC",
+        "D5": "Economic start",
+        "E5": "Ramp / duration",
+        "F5": "Exposed cohort / grade",
+        "G5": "Amplitude + unit",
+        "H5": "Revenue lag",
+        "I5": "COGS lag",
+        "J5": "Cash lag",
+        "K5": "Rival/customer response",
+        "L5": "Model nodes",
+        "M5": "Source IDs",
+        "N5": "Ex ante / posthoc"
+      },
+      "populated_cells": 16,
+      "synthetic": false
+    },
+    {
+      "sheet": "37_Time_Bridges",
+      "purpose": "Separate event time, monthly operations, quarterly financials and the full lifecycle. Flow=SUM; closing stock=LAST; ratios need proper denominators.",
+      "headers": {
+        "A5": "Node / variable",
+        "B5": "Fine grid",
+        "C5": "Coarse grid",
+        "D5": "Metric type",
+        "E5": "Aggregation rule",
+        "F5": "Opening state",
+        "G5": "Inflows",
+        "H5": "Outflows",
+        "I5": "Closing state",
+        "J5": "Conservation gap",
+        "K5": "Economic horizon",
+        "L5": "Price horizon",
+        "M5": "Evidence / reviewer"
+      },
+      "populated_cells": 30,
+      "synthetic": false
+    },
+    {
+      "sheet": "38_Data_Vintages",
+      "purpose": "Input exact normalized UTC timestamps. Retrieved-today data may be used historically only with verifiable historical publication/version provenance.",
+      "headers": {
+        "A5": "Fact/version ID",
+        "B5": "Entity / exact fact key",
+        "C5": "Observed period",
+        "D5": "Original/revised",
+        "E5": "Version public UTC",
+        "F5": "Feature cutoff UTC",
+        "G5": "Availability audit",
+        "H5": "Predecessor / lineage",
+        "I5": "Archive hash",
+        "J5": "Partition",
+        "K5": "Provider available UTC",
+        "L5": "Target label?",
+        "M5": "Provenance"
+      },
+      "populated_cells": 30,
+      "synthetic": false
+    },
+    {
+      "sheet": "39_Validation_Plan",
+      "purpose": "Protocol template; counts are examples, not a guarantee of statistical sufficiency. Market and financial histories need point-in-time versions.",
+      "headers": {
+        "A5": "Field",
+        "B5": "Default / rule",
+        "C5": "Reason",
+        "D5": "Owner",
+        "E5": "Frozen before test?"
+      },
+      "populated_cells": 75,
+      "synthetic": false
+    },
+    {
+      "sheet": "40_Forecast_Locks",
+      "purpose": "Freeze before release. Structural forecasts and guidance-assisted nowcasts must not share a performance label.",
+      "headers": {
+        "A5": "Forecast ID",
+        "B5": "Entity / metric",
+        "C5": "Lane",
+        "D5": "Origin UTC",
+        "E5": "Target period",
+        "F5": "Expected release UTC",
+        "G5": "Input manifest hash",
+        "H5": "Model/prompt hash",
+        "I5": "Protocol hash",
+        "J5": "Prediction",
+        "K5": "Created UTC",
+        "L5": "Scored UTC",
+        "M5": "Revision of",
+        "N5": "Receipt hash"
+      },
+      "populated_cells": 16,
+      "synthetic": false
+    },
+    {
+      "sheet": "41_Holdout_Scores",
+      "purpose": "One metric definition per row. Inputs are evaluator outputs; sealed actuals do not belong in model-development feature packets.",
+      "headers": {
+        "A5": "Forecast ID",
+        "B5": "Lane / split",
+        "C5": "Metric + unit",
+        "D5": "Forecast",
+        "E5": "Actual",
+        "F5": "Baseline",
+        "G5": "Signed error",
+        "H5": "Absolute error",
+        "I5": "Baseline abs. error",
+        "J5": "Train-only scale",
+        "K5": "MASE",
+        "L5": "Released actual source",
+        "M5": "Status"
+      },
+      "populated_cells": 75,
+      "synthetic": false
+    },
+    {
+      "sheet": "42_Error_Attribution",
+      "purpose": "Explain outcomes without rewriting the frozen forecast. Track volume, price, cost, tax and cash separately even when EPS happens to match.",
+      "headers": {
+        "A5": "Forecast ID",
+        "B5": "Driver / line",
+        "C5": "Frozen estimate",
+        "D5": "First released actual",
+        "E5": "Error",
+        "F5": "Cause class",
+        "G5": "Known before origin?",
+        "H5": "Supporting evidence",
+        "I5": "Counter-explanation",
+        "J5": "Posthoc only?",
+        "K5": "Model revision",
+        "L5": "Residual unresolved",
+        "M5": "Owner"
+      },
+      "populated_cells": 30,
+      "synthetic": false
+    },
+    {
+      "sheet": "43_Rival_Reactions",
+      "purpose": "Track incentives, constraints and best alternatives. A technically superior product does not confer unlimited pricing power.",
+      "headers": {
+        "A5": "Entity",
+        "B5": "Role / grade",
+        "C5": "Constraint",
+        "D5": "Feasible action",
+        "E5": "Contribution/NPV basis",
+        "F5": "Trigger",
+        "G5": "Announcement UTC",
+        "H5": "Effective output date",
+        "I5": "Financing / equipment",
+        "J5": "Effect on supply/demand",
+        "K5": "Effect on price/share",
+        "L5": "Observed or inferred",
+        "M5": "Source IDs"
+      },
+      "populated_cells": 15,
+      "synthetic": false
+    },
+    {
+      "sheet": "44_Research_Coverage",
+      "purpose": "Coverage denominator must be real. Document counts measure effort, not economic identification; decisive gaps remain blocking.",
+      "headers": {
+        "A5": "Question ID",
+        "B5": "Candidate / chain",
+        "C5": "Missing parameter",
+        "D5": "Source sought",
+        "E5": "Sources read",
+        "F5": "Original origins",
+        "G5": "Known exposure covered",
+        "H5": "Exposure denominator",
+        "I5": "Coverage ratio",
+        "J5": "Target sensitivity pp",
+        "K5": "Could reverse rank?",
+        "L5": "Next discriminating query",
+        "M5": "Status",
+        "N5": "Stop rationale"
+      },
+      "populated_cells": 31,
+      "synthetic": false
+    },
+    {
+      "sheet": "45_Agent_Handoffs",
+      "purpose": "Each handoff preserves cutoff, inputs, evidence types, contradictions and affected model nodes. The receiver can reject it.",
+      "headers": {
+        "A5": "Task ID",
+        "B5": "From agent",
+        "C5": "To agent",
+        "D5": "Question",
+        "E5": "Cutoff UTC",
+        "F5": "Allowed partitions",
+        "G5": "Input IDs/hash",
+        "H5": "Findings/claim IDs",
+        "I5": "Counterevidence",
+        "J5": "Blocking gaps",
+        "K5": "Affected nodes",
+        "L5": "Output hash",
+        "M5": "Receiver status",
+        "N5": "Next action"
+      },
+      "populated_cells": 16,
+      "synthetic": false
+    },
+    {
+      "sheet": "46_Method_Sources",
+      "purpose": "These sources support validation and data handling, not real-company forecasts. All research rules beyond those claims are authored methodology.",
+      "headers": {
+        "A5": "Source ID",
+        "B5": "Topic",
+        "C5": "Publisher",
+        "D5": "URL",
+        "E5": "Implementation use",
+        "F5": "Verified date"
+      },
+      "populated_cells": 50,
+      "synthetic": false
+    },
+    {
+      "sheet": "47_V2_Gates",
+      "purpose": "Global and candidate-specific gates are independent. A synthetic test pass does not establish company eligibility.",
+      "headers": {
+        "A5": "Gate / candidate",
+        "B5": "Status",
+        "C5": "Owner",
+        "D5": "Requirement",
+        "E5": "Pass evidence",
+        "F5": "Reviewer",
+        "G5": "Updated UTC"
+      },
+      "populated_cells": 127,
+      "synthetic": false
+    },
+    {
+      "sheet": "48_V2_Synthetic",
+      "purpose": "Invented values demonstrate customer choice, deployment caps, lagged pricing and test scoring. They do not validate any security or forecast.",
+      "headers": {
+        "A5": "Metric",
+        "B5": "Editable assumption",
+        "C5": "Calculated result",
+        "D5": "Unit",
+        "E5": "Economic or audit interpretation",
+        "F5": "Provenance"
+      },
+      "populated_cells": 316,
+      "synthetic": true
+    },
+    {
+      "sheet": "49_Dynamics_Demo",
+      "purpose": "Invented cohort and contract path. Deployments are limited by good output and integration; later shocks affect prices and costs on different lags.",
+      "headers": {
+        "A5": "Period",
+        "B5": "Installed opening",
+        "C5": "New economic demand",
+        "D5": "Deferred opening",
+        "E5": "Total pending",
+        "F5": "Qualified output",
+        "G5": "Integration slots",
+        "H5": "Deployed",
+        "I5": "Deferred closing",
+        "J5": "Retirements",
+        "K5": "Installed closing",
+        "L5": "Benchmark price",
+        "M5": "Repriced share",
+        "N5": "Realized ASP",
+        "O5": "Recognized unit cost",
+        "P5": "Revenue",
+        "Q5": "Gross profit"
+      },
+      "populated_cells": 166,
+      "synthetic": true
+    }
+  ]
+}
